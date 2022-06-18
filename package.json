@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dev-davey/codeSchool/issues"
   },
-  "homepage": "https://github.com/dev-davey/codeSchool#readme"
+  "homepage": "https://github.com/dev-davey/codeSchool#readme",
+  "dependencies": {
+    "firebase": "^9.8.3"
+  }
 }

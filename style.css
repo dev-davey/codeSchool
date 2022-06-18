@@ -16,10 +16,39 @@
 :root {
     --light-color-3: #006ee6;
   }
+  :root{
+    --white: #ffff;
+  }
 
 body{
     font-family: 'Kanit', sans-serif;
 }
+
+.navbar{
+  background-color: var(--dark-color-3);
+  height: 90px;
+}
+
+.navbar-nav .nav-link{
+ color: var(--white);
+ margin: 20px;
+ font-weight: 700;
+}
+
+.navbar-nav{
+  margin-right: 3em;
+}
+
+.carousel img{
+  max-height: 800px;
+}
+
+
+
+.navbar .nav-item{
+  color: var(--white);
+}
+
 
 .flex_container{
     height: 100vh;
@@ -44,7 +73,7 @@ body{
     width: 280px;
     margin: .5em;
     text-align: center;
-    border: 1px solid var(--light-color-3);
+    border: 1px solid var(--light-color-1);
     border-radius: 5px;
     text-transform: uppercase;
     font-family: 'Kanit', sans-serif;
@@ -59,7 +88,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--white);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -80,5 +109,5 @@ body{
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
     background-color: var(--light-color-1);
-    color: white;
+    color: var(--white);
 }
