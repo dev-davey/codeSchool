@@ -1,0 +1,84 @@
+:root {
+    --dark-color-1: #03254c;
+  }
+:root {
+    --dark-color-2: #001833;
+  }
+:root {
+    --dark-color-3: #003166;
+  }
+:root {
+    --light-color-1: #004999;
+  }
+:root {
+    --light-color-2: #0062cc;
+  }
+:root {
+    --light-color-3: #006ee6;
+  }
+
+body{
+    font-family: 'Kanit', sans-serif;
+}
+
+.flex_container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--light-color-1);
+    width: 350px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+#form-container > input {
+    height: 50px;
+    width: 280px;
+    margin: .5em;
+    text-align: center;
+    border: 1px solid var(--light-color-3);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+.form-header{
+    height: 100px;
+    width: 100%;
+    background-color: var(--light-color-1);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button-container{
+    height: 80px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container > button{
+    width: 50%;
+    margin: 5px;
+    height: 30px;
+    border: 1px solid var(--light-color-1);
+    font-family: 'Kanit', sans-serif;
+    text-transform: uppercase;
+    background-color: var(--light-color-1);
+    color: white;
+}
