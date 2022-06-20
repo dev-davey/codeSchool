@@ -21,12 +21,12 @@
   }
 
 body{
-    font-family: 'Kanit', sans-serif;
+  font-family: 'Cinzel', serif;
 }
 
 .navbar{
-  background-color: var(--dark-color-3);
-  height: 90px;
+  background-color: var(--light-color-2);
+  height: 70px;
 }
 
 .navbar-nav .nav-link{
@@ -38,76 +38,122 @@ body{
 .navbar-nav{
   margin-right: 3em;
 }
-
-.carousel img{
-  max-height: 800px;
-}
-
-
-
 .navbar .nav-item{
   color: var(--white);
 }
 
+.navbar-brand{
+  color: var(--white);
+  margin: 20px;
+ font-weight: 700;
+}
+
+.two-col-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+
+
+
+
+.cta-button{
+  width: 160px;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  color: var(--white);
+  background-color: var(--light-color-2);
+}
+
+.three-col-row{
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-color-3);
+  --bs-gutter-x: 0;
+  color: var(--white);
+}
+
+
+
+.three-col{
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+.svg-img{
+  height: 8em;
+}
+
+.curved{
+  text-align: center;
+  margin-top: 20px;
+}
 
 .flex_container{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #form-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid var(--light-color-1);
-    width: 350px;
-    border-radius: 5px;
-    padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--light-color-1);
+  width: 350px;
+  border-radius: 5px;
+  padding-bottom: 20px;
 }
 
 #form-container > input {
-    height: 50px;
-    width: 280px;
-    margin: .5em;
-    text-align: center;
-    border: 1px solid var(--light-color-1);
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: 'Kanit', sans-serif;
+  height: 50px;
+  width: 280px;
+  margin: .5em;
+  text-align: center;
+  border: 1px solid var(--light-color-1);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
 }
 
 
 .form-header{
-    height: 100px;
-    width: 100%;
-    background-color: var(--light-color-1);
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    font-weight: bold;
-    margin-bottom: 20px;
+  height: 100px;
+  width: 100%;
+  background-color: var(--light-color-1);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .button-container{
-    height: 80px;
-    width: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 80px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-container > button{
-    width: 50%;
-    margin: 5px;
-    height: 30px;
-    border: 1px solid var(--light-color-1);
-    font-family: 'Kanit', sans-serif;
-    text-transform: uppercase;
-    background-color: var(--light-color-1);
-    color: var(--white);
+  width: 50%;
+  margin: 5px;
+  height: 30px;
+  border: 1px solid var(--light-color-1);
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+  background-color: var(--light-color-1);
+  color: var(--white);
 }
