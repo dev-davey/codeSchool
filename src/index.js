@@ -9,7 +9,7 @@ import {
   getAuth,
   onAuthStateChanged,
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
+  updateProfile,
 } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
 
 const firebaseConfig = {
@@ -22,7 +22,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
 const db = getDatabase(app);
 
@@ -33,8 +32,6 @@ onAuthStateChanged(auth, (user) => {
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     const uid = user.uid;
-    console.log(uid);
-    console.log("fuck you");
     window.location.href = "./loggedin.html";
   } else {
     console.log("no one signed in");
@@ -42,11 +39,11 @@ onAuthStateChanged(auth, (user) => {
 });
 
 function register() {
-  console.log("here");
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
   let fullname = document.getElementById("full_name").value;
   let username = document.getElementById("username").value;
+  console.log(username);
 
   //validating input fields above
   if (email.length < 6 || password.lenth < 6) {
@@ -54,17 +51,20 @@ function register() {
     return;
   }
   if (fullname.length < 3) {
-    alert("not a real name asshole");
+    alert("Please enter your full name");
     return;
   }
   if (username.length < 5) {
-    alert("not a real name asshole");
+    alert("Username has to contain 5 characters");
     return;
   }
+
   createUserWithEmailAndPassword(auth, email, password)
     .then(function () {
-      console.log("here2");
       let user = auth.currentUser;
+      updateProfile(auth.currentUser, {
+        displayName: username,
+      });
       const reference = ref(db, "users/" + user.uid);
       set(reference, {
         email: email,
