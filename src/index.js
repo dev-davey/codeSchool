@@ -27,17 +27,6 @@ const db = getDatabase(app);
 
 document.getElementById("register").addEventListener("click", register);
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
-    window.location.href = "./loggedin.html";
-  } else {
-    console.log("no one signed in");
-  }
-});
-
 function register() {
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
@@ -61,20 +50,37 @@ function register() {
 
   createUserWithEmailAndPassword(auth, email, password)
     .then(function () {
-      let user = auth.currentUser;
       updateProfile(auth.currentUser, {
         displayName: username,
       });
+    })
+    .then(function () {
+      let user = auth.currentUser;
+      let date = String(new Date());
       const reference = ref(db, "users/" + user.uid);
+      console.log("this firing");
       set(reference, {
         email: email,
         fullName: fullname,
         nickName: username,
         Level: 1,
-        signUpDate: new Date(Date.now()),
+        signUpDate: date,
       });
+      setTimeout(newUserCreated, 2000);
     })
     .catch(function (error) {
       console.log(error);
     });
+}
+
+function newUserCreated() {
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      window.location.href = "./loggedin.html";
+    } else {
+      console.log("no one signed in");
+    }
+  });
 }
