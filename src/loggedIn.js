@@ -25,53 +25,40 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const currentUser = auth.curentUser;
 const db = getDatabase(app);
+
+//dom selectors
 const logOutButton = document.getElementById("log-out");
+const boxArray = document.getElementsByClassName("profile-box");
 
 logOutButton.addEventListener("click", logOut);
 
-onAuthStateChanged(auth, (user) => {
-  //checking if logged in
-  if (user) {
-    const uid = user.uid;
-    const pullUserInfo = ref(db, "users/");
+function loadPage() {
+  onAuthStateChanged(auth, (user) => {
+    //checking if logged in
+    if (user) {
+      const uid = user.uid;
+      console.log(uid);
+      const pullUserInfo = ref(db, "users/");
 
-    onValue(pullUserInfo, (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-      // let keys = Object.keys(data);
-      //console.log(keys);
+      onValue(pullUserInfo, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        for (let i in data) {
+          if (i == uid) {
+            console.log(data[i].email);
+            createHtmlElement("h3", data[i].email, boxArray[0]);
+          }
+        }
+      });
 
-      // keys.forEach((ele) => {
-      //   if (ele == uid) {
-      //     console.log(ele);
-      //   }
-      // });
-    });
-
-    //   for (const key in data) {
-    //     if (key == user.uid) {
-    //       const displayProfileHeading = createHtmlElement(`
-    //     <ul>
-    //       <li>Level: ${user.uid.level}</li>
-    //       <li>Name: ${user.uid.fullName}</li>
-    //       <li>User Name: ${user.uid.nickName}</li>
-    //       <li>Sign Up Date: ${user.uid.signUpDate}</li>
-    //     </ul>
-    //   `);
-    //       document
-    //         .getElementsByClassName("profile-container")[0]
-    //         .appendChild(displayProfileHeading);
-    //     }
-    //   }
-    // };
-
-    document.getElementById(
-      "user"
-    ).textContent = `Welcome ${user.displayName} to your user profile`;
-  } else {
-    window.location.href = "/login.html";
-  }
-});
+      document.getElementById(
+        "user"
+      ).textContent = `Welcome ${user.displayName} to your user profile`;
+    } else {
+      window.location.href = "/login.html";
+    }
+  });
+}
 
 function logOut() {
   signOut(auth)
@@ -83,8 +70,10 @@ function logOut() {
     });
 }
 
-function createHtmlElement(html) {
-  const template = document.createElement("template");
-  template.innerHTML = html.trim;
-  return template.content.firstElementChild;
+function createHtmlElement(htmlTag, htmlContent, appendTo) {
+  let htmlElement = document.createElement(htmlTag);
+  htmlElement.textContent = htmlContent.toString();
+  appendTo.appendChild(htmlElement);
 }
+
+window.addEventListener("DOMContentLoaded", loadPage);
