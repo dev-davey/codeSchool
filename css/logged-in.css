@@ -24,14 +24,56 @@ body{
   font-family: 'Cinzel', serif;
 }
 
-.profile-box-container{
-    display: flex;
+.navbar{
+  background-color: var(--light-color-2);
+  height: 70px;
+}
+
+.navbar-nav .nav-link{
+ color: var(--white);
+ margin: 20px;
+ font-weight: 700;
+}
+
+.navbar-nav{
+  margin-right: 3em;
+}
+.navbar .nav-item{
+  color: var(--white);
+}
+
+.navbar-brand{
+  color: var(--white);
+  margin: 20px;
+ font-weight: 700;
+}
+
+.curriculm-box-container{
+  border: 1px solid green;
+  width: 100%;
+  margin: auto;
+
     
 }
 
-.profile-box{
-    width: 23%;
+.curriculm-box{
     height: 200px;
     border: 1px solid var(--light-color-1);
     margin: 10px;
+}
+
+.top-bar{
+  width: 100%;
+  background-color: var(--dark-color-1);
+  color: var(--white);
+  height: 100px;
+}
+
+.top-bar-col{
+  border: 1px solid white;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }

@@ -29,6 +29,7 @@ const db = getDatabase(app);
 //dom selectors
 const logOutButton = document.getElementById("log-out");
 const boxArray = document.getElementsByClassName("profile-box");
+const topBarCol = document.getElementsByClassName("top-bar-col");
 
 logOutButton.addEventListener("click", logOut);
 
@@ -45,15 +46,17 @@ function loadPage() {
         console.log(data);
         for (let i in data) {
           if (i == uid) {
-            console.log(data[i].email);
-            createHtmlElement("h3", data[i].email, boxArray[0]);
+            console.log(data[i].nickName);
+            createHtmlElement("h3", data[i].nickName, topBarCol[0]);
+            createHtmlElement(
+              "h3",
+              data[i].signUpDate.slice(0, 15),
+              topBarCol[1]
+            );
+            createHtmlElement("h3", data[i].Level, topBarCol[2]);
           }
         }
       });
-
-      document.getElementById(
-        "user"
-      ).textContent = `Welcome ${user.displayName} to your user profile`;
     } else {
       window.location.href = "/login.html";
     }
