@@ -48,6 +48,27 @@ body{
  font-weight: 700;
 }
 
+.top-row{
+  min-height: 22rem;
+}
+
+.center-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scientist-svg{
+  height: 20rem;
+}
+
+.svg-circle{
+  background-color: var(--light-color-2);
+  border-radius: 50%;
+  width: 22rem;
+}
+
 .two-col-text{
   display: flex;
   flex-direction: column;
@@ -85,6 +106,14 @@ body{
   flex-direction: column;
   align-items: center;
   padding: 8px;
+}
+
+.svg-circle-three{
+  height: 14em;
+  background-color: #ffff;
+  width: 14em;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
 .svg-img{
