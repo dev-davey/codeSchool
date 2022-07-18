@@ -1,0 +1,97 @@
+:root {
+    --dark-color-1: #03254c;
+  }
+:root {
+    --dark-color-2: #001833;
+  }
+:root {
+    --dark-color-3: #003166;
+  }
+:root {
+    --light-color-1: #004999;
+  }
+:root {
+    --light-color-2: #0062cc;
+  }
+:root {
+    --light-color-3: #006ee6;
+  }
+  :root{
+    --white: #ffff;
+  }
+
+body{
+  font-family: 'Cinzel', serif;
+}
+
+.navbar{
+  background-color: var(--light-color-2);
+  height: 70px;
+}
+
+.navbar-nav .nav-link{
+ color: var(--white);
+ margin: 20px;
+ font-weight: 700;
+}
+
+.navbar-nav{
+  margin-right: 3em;
+}
+.navbar .nav-item{
+  color: var(--white);
+}
+
+.navbar-brand{
+  color: var(--white);
+  margin: 20px;
+ font-weight: 700;
+}
+
+.two-col{
+  margin-top: 30px;
+}
+
+.two-col-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .cta-button{
+    width: 160px;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    color: var(--white);
+    background-color: var(--light-color-2);
+  }
+
+  .center-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .curriculum-header{
+    background-color: var(--light-color-3);
+    font-family: 'Anton', sans-serif;
+    border-top: 2px solid white;
+    letter-spacing: 1.5px;
+
+  }
+
+  .curriculum-header .curriculum-inner{
+   margin-top: 30px;
+    margin-bottom: -80px;
+    color: var(--white);
+  }
+  .curriculum-header .curriculum-inner img{
+    height: 70px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
