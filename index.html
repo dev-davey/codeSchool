@@ -16,187 +16,206 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/card.css" />
     <title>Document</title>
   </head>
   <body>
-    <nav>
-      <div class="menu-btn">
-        <div class="line line--1"></div>
-        <div class="line line--2"></div>
-        <div class="line line--3"></div>
-      </div>
+    <a href="./index.html" class="logo" target="_blank">
+      <h5>CodeLab</h5>
+    </a>
 
-      <div class="nav-links">
-        <a href="" class="link">Home</a>
-        <a href="" class="link">Contact</a>
-        <a href="" class="link">Profile</a>
-        <a href="" class="link">About</a>
-      </div>
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
+    <label for="menu-icon"></label>
+    <nav class="nav">
+      <ul class="pt-5">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Curriculmn</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
     </nav>
 
-    <div class="header-animation">
-      <div id="container-brand">
-        <span id="text1"></span>
-        <span id="text2"></span>
-      </div>
-
-      <svg id="filters">
-        <defs>
-          <filter id="threshold">
-            <feColorMatrix
-              in="SourceGraphic"
-              type="matrix"
-              values="1 0 0 0 0
-                      0 1 0 0 0
-                      0 0 1 0 0
-                      0 0 0 255 -140"
-            />
-          </filter>
-        </defs>
-      </svg>
-    </div>
-    <div class="container">
-      <div class="row top-row">
-        <div class="col-md-7 col-12 center-flex">
-          <h1>Learn Something</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore
-            minus voluptatem ad, aliquam, consectetur nisi qui cupiditate
-            doloribus animi similique adipisci. Qui animi et quibusdam non
-            dolorum nihil. Recusandae, id?
-          </p>
+    <div class="container card-container">
+      <div class="row">
+        <div class="col-lg-4 col-12 flex-center">
+          <figure class="image-block">
+            <h1>READY TO GO COURSES</h1>
+            <img src="./imgs/ipadgirl.jpg" alt="" />
+            <figcaption>
+              <h3>More Info</h3>
+              <p>
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+                libero sit amet quam egestas semper. Aenean ultricies mi vitae
+                est. Mauris placerat eleifend leo.
+              </p>
+              <button>Sign Up</button>
+            </figcaption>
+          </figure>
         </div>
-        <div class="col-md-5 col-12 center-flex">
-          <div class="svg-circle center-flex">
-            <img
-              class="scientist-svg"
-              src="./imgs/Scientist-Red-Hair.svg"
-              alt=""
-            />
-          </div>
+        <div class="col-lg-4 col-12 flex-center">
+          <figure class="image-block">
+            <h1>REAL CODING LANGUAGES</h1>
+            <img src="./imgs/computergirl.jpg" alt="" />
+            <figcaption>
+              <h3>More Info</h3>
+              <p>
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+                libero sit amet quam egestas semper. Aenean ultricies mi vitae
+                est. Mauris placerat eleifend leo.
+              </p>
+              <button>Sign Up</button>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-lg-4 col-12 flex-center">
+          <figure class="image-block">
+            <h1>GAME-BASED LEARNING</h1>
+            <img src="./imgs/scratch.jpg" alt="" />
+            <figcaption>
+              <h3>More Info</h3>
+              <p>
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas. Vestibulum tortor quam,
+                feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
+                libero sit amet quam egestas semper. Aenean ultricies mi vitae
+                est. Mauris placerat eleifend leo.
+              </p>
+              <button>Sign Up</button>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
     <div class="container-fluid">
-      <div class="row mt-3 d-flex justify-content-between three-col-row">
-        <div class="col-12 svg-col">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#ffff"
-              fill-opacity="1"
-              d="M0,32L48,37.3C96,43,192,53,288,80C384,107,480,149,576,181.3C672,213,768,235,864,208C960,181,1056,107,1152,74.7C1248,43,1344,53,1392,58.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-            ></path>
-          </svg>
-        </div>
-
-        <div class="col-md-3 three-col">
-          <div class="svg-circle-three center-flex">
-            <img class="svg-img" src="./imgs/scientist-2.svg" alt="" />
-          </div>
-
-          <h5>Learn Something</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-            deserunt nobis sequi aliquid fugit a nulla quidem error harum porro
-            sit nihil nesciunt odio quibusdam illo, eligendi illum deleniti
-            aliquam?
-          </p>
-        </div>
-        <div class="col-md-3 three-col">
-          <div class="svg-circle-three center-flex">
-            <img class="svg-img" src="./imgs/science-girl-blonde.svg" alt="" />
-          </div>
-
-          <h5>Learn Something</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-            deserunt nobis sequi aliquid fugit a nulla quidem error harum porro
-            sit nihil nesciunt odio quibusdam illo, eligendi illum deleniti
-            aliquam?
-          </p>
-        </div>
-        <div class="col-md-3 three-col">
-          <div class="svg-circle-three center-flex">
-            <img
-              class="svg-img"
-              src="./imgs/Science-Girl-Ponytail-2.svg"
-              alt=""
-            />
-          </div>
-          <h5>Learn Something</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-            deserunt nobis sequi aliquid fugit a nulla quidem error harum porro
-            sit nihil nesciunt odio quibusdam illo, eligendi illum deleniti
-            aliquam?
-          </p>
-        </div>
-
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
-          <path
-            fill="#ffff"
-            fill-opacity="1"
-            d="M0,224L80,229.3C160,235,320,245,480,229.3C640,213,800,171,960,154.7C1120,139,1280,149,1360,154.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-          ></path>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#004999"
+          fill-opacity="1"
+          d="M0,96L34.3,106.7C68.6,117,137,139,206,144C274.3,149,343,139,411,138.7C480,139,549,149,617,160C685.7,171,754,181,823,176C891.4,171,960,149,1029,138.7C1097.1,128,1166,128,1234,112C1302.9,96,1371,64,1406,48L1440,32L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
+      <div class="row text-center page-divider flex-center">
+        <h1>Track Your Students Progress</h1>
       </div>
     </div>
-    <div class="container">
+    <div class="container mt-3">
       <div class="row">
-        <div class="col-md-6 col-12 d-flex justify-content-center two-col">
-          <img class="img-fluid" src="./imgs/girl-coding.svg" alt="" />
-        </div>
+        <div class="center">
+          <div class="card">
+            <div class="additional">
+              <div class="user-card">
+                <div class="level center">Level 13</div>
+                <div class="points center">5,312 Points</div>
+                <div class="player-svg center mt-3">
+                  <img src="./imgs/Science-Girl-Ponytail-2.svg" alt="" />
+                </div>
+              </div>
+              <div class="more-info">
+                <h1>Jane Doe</h1>
+                <div class="coords">
+                  <span>Group Name</span>
+                  <span>Joined January 2019</span>
+                </div>
+                <div class="coords">
+                  <span>Position/Role</span>
+                  <span>City, Country</span>
+                </div>
+                <div class="stats">
+                  <div>
+                    <div class="title">Awards</div>
+                    <i class="fa fa-trophy"></i>
+                    <div class="value">2</div>
+                  </div>
+                  <div>
+                    <div class="title">Matches</div>
+                    <i class="fa fa-gamepad"></i>
+                    <div class="value">27</div>
+                  </div>
+                  <div>
+                    <div class="title">Pals</div>
+                    <i class="fa fa-group"></i>
+                    <div class="value">123</div>
+                  </div>
+                  <div>
+                    <div class="title">Coffee</div>
+                    <i class="fa fa-coffee"></i>
+                    <div class="value infinity">∞</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="general">
+              <h1>Jane Doe</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
+                volutpat mauris, at molestie lacus. Nam vestibulum sodales odio
+                ut pulvinar.
+              </p>
+              <span class="more">Mouse over the card for more info</span>
+            </div>
+          </div>
 
-        <div class="col-md-6 col-12 two-col-text d-flex justify-content-center">
-          <h2>Coding For Kids</h2>
-          <p>
-            Introducing Game and Web Development To The Next Generation.....
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nisi
-            maxime sit voluptatem sapiente ullam aliquid minus nemo, soluta quas
-            harum numquam blanditiis ea aspernatur ratione! Laborum odio
-            accusantium quod.
-          </p>
-          <button class="cta-button">Sign Up</button>
-        </div>
-      </div>
-
-      <div class="row flex-column-reverse flex-md-row mx-3 two-col">
-        <div
-          class="col-md-6 col-12 md-order-2 two-col-text d-flex justify-content-center"
-        >
-          <h2>Coding For Kids</h2>
-
-          <p>
-            Introducing Game and Web Development To The Next Generation.....
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nisi
-            maxime sit voluptatem sapiente ullam aliquid minus nemo, soluta quas
-            harum numquam blanditiis ea aspernatur ratione! Laborum odio
-            accusantium quod.
-          </p>
-          <button class="cta-button">Sign Up</button>
-        </div>
-
-        <div class="col-md-6 col-12 d-flex justify-content-center">
-          <img class="img-fluid" src="./imgs/kids-learning.svg" alt="" />
-        </div>
-      </div>
-      <div class="row two-col">
-        <div class="col-md-6 col-12 d-flex justify-content-center">
-          <img class="img-fluid" src="./imgs/kids-class.svg" alt="" />
-        </div>
-
-        <div class="col-md-6 col-12 two-col-text d-flex justify-content-center">
-          <h2>Coding For Kids</h2>
-          <p>
-            Introducing Game and Web Development To The Next Generation.....
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure nisi
-            maxime sit voluptatem sapiente ullam aliquid minus nemo, soluta quas
-            harum numquam blanditiis ea aspernatur ratione! Laborum odio
-            accusantium quod.
-          </p>
-          <button class="cta-button">Sign Up</button>
+          <div class="card green">
+            <div class="additional">
+              <div class="user-card">
+                <div class="level center">Level 13</div>
+                <div class="points center">5,312 Points</div>
+                <div class="player-svg center mt-2">
+                  <img src="./imgs/science-girl-blonde.svg" alt="" />
+                </div>
+              </div>
+              <div class="more-info">
+                <h1>Jane Doe</h1>
+                <div class="coords">
+                  <span>Group Name</span>
+                  <span>Joined January 2019</span>
+                </div>
+                <div class="coords">
+                  <span>Position/Role</span>
+                  <span>City, Country</span>
+                </div>
+                <div class="stats">
+                  <div>
+                    <div class="title">Awards</div>
+                    <i class="fa fa-trophy"></i>
+                    <div class="value">2</div>
+                  </div>
+                  <div>
+                    <div class="title">Matches</div>
+                    <i class="fa fa-gamepad"></i>
+                    <div class="value">27</div>
+                  </div>
+                  <div>
+                    <div class="title">Pals</div>
+                    <i class="fa fa-group"></i>
+                    <div class="value">123</div>
+                  </div>
+                  <div>
+                    <div class="title">Coffee</div>
+                    <i class="fa fa-coffee"></i>
+                    <div class="value infinity">∞</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="general">
+              <h1>Jane Doe</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
+                volutpat mauris, at molestie lacus. Nam vestibulum sodales odio
+                ut pulvinar.
+              </p>
+              <span class="more">Mouse over the card for more info</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

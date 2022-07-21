@@ -3,17 +3,7 @@ const elts = {
   text2: document.getElementById("text2"),
 };
 
-const texts = [
-  "If",
-  "You",
-  "Like",
-  "It",
-  "Please",
-  "Give",
-  "a Love",
-  ":)",
-  "by @DotOnion",
-];
+const texts = ["Welcome", "To", "The", "CodeLab", "Academy!"];
 
 const morphTime = 1;
 const cooldownTime = 0.25;

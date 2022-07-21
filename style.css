@@ -24,33 +24,14 @@ body{
   font-family: 'Cinzel', serif;
 }
 
-.navbar{
-  background-color: var(--light-color-2);
-  height: 70px;
-}
-
-.navbar-nav .nav-link{
- color: var(--white);
- margin: 20px;
- font-weight: 700;
-}
-
-.navbar-nav{
-  margin-right: 3em;
-}
-.navbar .nav-item{
-  color: var(--white);
-}
-
-.navbar-brand{
-  color: var(--white);
-  margin: 20px;
- font-weight: 700;
+.container-fluid{
+  padding: 0;
 }
 
 .header-animation{
   position: relative;
-  height: 300px;
+  min-height: 300px;
+  display: block;
 }
 
 #container-brand {
@@ -79,29 +60,19 @@ body{
 }
 
 
-
-
-.top-row{
-  min-height: 22rem;
-}
-
-.center-flex{
+.flex-center{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.scientist-svg{
-  height: 20rem;
+.page-divider{
+  height: 200px;
+  background-color: var(--light-color-1);
+  color: var(--white);
 }
 
-.svg-circle{
-  background-color: var(--light-color-2);
-  border-radius: 50%;
-  width: 22rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+
 
 .two-col{
   margin-top: 30px;
@@ -221,4 +192,18 @@ body{
   text-transform: uppercase;
   background-color: var(--light-color-1);
   color: var(--white);
+}
+
+@media screen and (max-width: 900px){
+  #text1,
+#text2 {
+  margin-top: 30px;
+  font-size: 40pt;
+
+}
+
+.header-animation{
+  min-height: 300px;
+}
+
 }
