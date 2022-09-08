@@ -19,7 +19,7 @@ const student = {
         {
             commenterThumb,
             commenterName,
-            comment
+            commentText
         }
     ]
 
