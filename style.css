@@ -1,22 +1,10 @@
 :root {
     --dark-color-1: #03254c;
-  }
-:root {
     --dark-color-2: #001833;
-  }
-:root {
     --dark-color-3: #003166;
-  }
-:root {
     --light-color-1: #004999;
-  }
-:root {
     --light-color-2: #0062cc;
-  }
-:root {
     --light-color-3: #006ee6;
-  }
-  :root{
     --white: #ffff;
   }
 
@@ -59,7 +47,6 @@ body{
   user-select: none;
 }
 
-
 .flex-center{
   display: flex;
   justify-content: center;
@@ -71,8 +58,6 @@ body{
   background-color: var(--light-color-1);
   color: var(--white);
 }
-
-
 
 .two-col{
   margin-top: 30px;
@@ -86,7 +71,6 @@ body{
   padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
 
 .cta-button{
   width: 160px;
@@ -104,8 +88,6 @@ body{
   --bs-gutter-x: 0;
   color: var(--white);
 }
-
-
 
 .three-col{
   border-radius: 10px;
@@ -161,7 +143,6 @@ body{
   font-family: 'Kanit', sans-serif;
 }
 
-
 .form-header{
   height: 100px;
   width: 100%;
@@ -196,14 +177,14 @@ body{
 
 @media screen and (max-width: 900px){
   #text1,
-#text2 {
-  margin-top: 30px;
-  font-size: 40pt;
+  #text2 {
+    margin-top: 30px;
+    font-size: 40pt;
 
-}
+  }
 
-.header-animation{
-  min-height: 300px;
-}
+  .header-animation{
+    min-height: 300px;
+  }
 
 }
