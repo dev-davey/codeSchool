@@ -25,33 +25,27 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase(app);
 
-document.getElementById("register").addEventListener("click", register);
+document.getElementById("form").addEventListener("submit", (e) => {
+e.preventDefault()
+register()
+})
+  
 
 function register() {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-  let fullname = document.getElementById("full_name").value;
-  let username = document.getElementById("username").value;
-  console.log(username);
+  console.log('hello')
 
-  //validating input fields above
-  if (email.length < 6 || password.lenth < 6) {
-    alert("email or password failed");
-    return;
-  }
-  if (fullname.length < 3) {
-    alert("Please enter your full name");
-    return;
-  }
-  if (username.length < 5) {
-    alert("Username has to contain 5 characters");
-    return;
-  }
+  let email = document.getElementById("emailAddress").value;
+  let password = document.getElementById("password").value;
+  let firstname = document.getElementById("firstName").value;
+  let lastname = document.getElementById('lastName').value;
+  let phonenumber = document.getElementById('phoneNumber').value;
+  let birthdate = document.getElementById('birthdayDate').value;
+  let studentemail = document.getElementById('studentEmail').value;
 
   createUserWithEmailAndPassword(auth, email, password)
     .then(function () {
       updateProfile(auth.currentUser, {
-        displayName: username,
+        displayName: firstname,
       });
     })
     .then(function () {
@@ -61,10 +55,25 @@ function register() {
       console.log("this firing");
       set(reference, {
         email: email,
-        fullName: fullname,
-        nickName: username,
+        studentemail: studentemail,
+        firstname: firstname,
+        lastname: lastname,
+        phonenumber: phonenumber,
+        birthdate: birthdate,
         Level: 1,
         signUpDate: date,
+        levelscompleted: 0,
+        belt: 'white',
+        paid: true,
+        profileimg: '',
+        subjects: {
+          html: 0,
+          js: 0,
+          python: 0,
+          scratch: 0,
+          unity: 0,       
+      }
+
       });
       setTimeout(newUserCreated, 2000);
     })
