@@ -1,3 +1,14 @@
+:root {
+  --dark-color-1: #03254c;
+  --dark-color-2: #001833;
+  --dark-color-3: #003166;
+  --light-color-1: #004999;
+  --light-color-2: #0062cc;
+  --light-color-3: #006ee6;
+  --white: #ffff;
+}
+
+
 .card-container{
     margin-top: 150px;
 }
@@ -96,16 +107,17 @@ figure figcaption button {
   }
   
   .card {
-    width: 450px;
+    width: 600px;
     max-width: 100%;
-    height: 250px;
+    height: 260px;
     background-color: #fff;
-    background: linear-gradient(#f8f8f8, #fff);
+    background: linear-gradient(var(--dark-color-1), var(--light-color-3));
     box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
     border-radius: 6px;
     overflow: hidden;
     position: relative;
     margin: 1.5rem auto;
+    color: #fff;
   }
   
   .card h1 {
@@ -116,7 +128,7 @@ figure figcaption button {
     position: absolute;
     width: 150px;
     height: 100%;
-    background: linear-gradient(#dE685E, #EE786E);
+    background: linear-gradient(var(--dark-color-1), var(--light-color-3));
     transition: width 0.4s;
     overflow: hidden;
     z-index: 2;
@@ -171,7 +183,7 @@ figure figcaption button {
   }
   
   .card .additional .more-info {
-    width: 300px;
+    width: 400px;
     float: left;
     position: absolute;
     left: 150px;
@@ -187,10 +199,12 @@ figure figcaption button {
     color: #224C36;
   }
   
-  .card .additional .coords {
+  .card .additional .more-info .coords {
     margin: 0 1rem;
     color: #fff;
-    font-size: 1rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
   }
   
   .card.green .additional .coords {
@@ -210,6 +224,7 @@ figure figcaption button {
     right: 1rem;
     top: auto;
     color: #fff;
+    
   }
   
   .card.green .additional .stats {
@@ -242,7 +257,7 @@ figure figcaption button {
   }
   
   .card .general {
-    width: 300px;
+    max-width: 400px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -260,9 +275,30 @@ figure figcaption button {
     font-size: 0.9em;
   }
   
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 550px){
+  
     .card .general {
         max-width: 200px;
         font-size: 10px;
+        right: 1rem;
+        
+    }
+
+    .card .more-info *{
+      max-width: 200px;
+      font-size: 10px;
+    }
+
+    .card .additional .stats{
+      flex-wrap: wrap;
+      margin-top: 1em;
+      top: 20;
+    }
+    .card .additional .stats div.title{
+      font-size: 10px;
+      margin: 10px;
+    }
+    .card .additional .stats div.value{
+      font-size: 10px;
     }
   }

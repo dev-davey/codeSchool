@@ -28,8 +28,15 @@ const db = getDatabase(app);
 
 //dom selectors
 const logOutButton = document.getElementById("log-out");
-const boxArray = document.getElementsByClassName("profile-box");
-const topBarCol = document.getElementsByClassName("top-bar-col");
+const welcomeMsg = document.getElementById('welcome-msg');
+const xp = document.getElementById('xp');
+const belt = document.getElementById('belt');
+const currentClass = document.getElementById('class');
+const startDate = document.getElementById('start-date');
+const level = document.getElementById('level');
+const studentName = document.getElementById('student-name')
+const studentName2 = document.getElementById('student-name2')
+
 
 logOutButton.addEventListener("click", logOut);
 
@@ -46,14 +53,15 @@ function loadPage() {
         console.log(data);
         for (let i in data) {
           if (i == uid) {
-            console.log(data[i].nickName);
-            createHtmlElement("h3", data[i].nickName, topBarCol[0]);
-            createHtmlElement(
-              "h3",
-              data[i].signUpDate.slice(0, 15),
-              topBarCol[1]
-            );
-            createHtmlElement("h3", data[i].Level, topBarCol[2]);
+            let subjects = data[i].subjects 
+            welcomeMsg.textContent = `Welcome ${data[i].firstname}`
+            xp.textContent = `XP: ${data[i].levelscompleted}`
+            belt.textContent = `Belt: ${data[i].belt}`
+            currentClass.textContent = `${Object.keys(subjects)[0]}`
+            startDate.textContent = `${data[i].signUpDate.slice(0, 16)}` 
+            level.textContent = `${data[i].Level}`
+            studentName.textContent = `${data[i].firstname} ${data[i].lastname}`
+            studentName2.textContent = `${data[i].firstname} ${data[i].lastname}`
           }
         }
       });
@@ -73,10 +81,10 @@ function logOut() {
     });
 }
 
-function createHtmlElement(htmlTag, htmlContent, appendTo) {
-  let htmlElement = document.createElement(htmlTag);
-  htmlElement.textContent = htmlContent.toString();
-  appendTo.appendChild(htmlElement);
-}
+// function createHtmlElement(htmlTag, htmlContent, appendTo) {
+//   let htmlElement = document.createElement(htmlTag);
+//   htmlElement.textContent = htmlContent.toString();
+//   appendTo.appendChild(htmlElement);
+// }
 
 window.addEventListener("DOMContentLoaded", loadPage);
