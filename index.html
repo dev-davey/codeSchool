@@ -10,22 +10,28 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap"
       rel="stylesheet"
     />
-    
+
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/card.css" />
+    <link rel="stylesheet" href="./css/figure.css" />
     <title>Document</title>
   </head>
   <body>
     <a href="./index.html" class="logo" target="_blank">
-      <h5>CodeLab</h5>
+      <img src="" alt="">
     </a>
 
     <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
@@ -33,12 +39,87 @@
     <nav class="nav">
       <ul class="pt-5">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Curriculmn</a></li>
+        <li><a href="./html/curriculum.html">Curriculmn</a></li>
         <li><a href="./login.html">Login</a></li>
         <li><a href="./register.html">Sign Up</a></li>
         <li><a href="#">About</a></li>
       </ul>
     </nav>
+
+    <div class="container" style="margin-top: 150px;">
+      <section class="mb-5">
+        <div class="row gx-lg-5">
+          <div class="col-lg-6 mb-5">
+            <div class="d-flex align-items-start">
+              <div class="flex-shrink-0">
+                <div class="p-3 badge-primary rounded-4">
+                  <i class="fas fa-cloud-upload-alt fa-lg text-primary fa-fw"></i>
+                </div>
+              </div>
+              <div class="flex-grow-1 ms-4">
+                <p class="fw-bold mb-1">Tutorials</p>
+                <p class="text-muted mb-1">
+                  Hundres of free tutorials to help your child learn with 1 on 1 mentoring.
+                </p>
+                <small><a href="">Learn more</a></small>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-lg-6 mb-5">
+            <div class="d-flex align-items-start">
+              <div class="flex-shrink-0">
+                <div class="p-3 badge-primary rounded-4">
+                  <i class="fas fa-database fa-lg text-primary fa-fw"></i>
+                </div>
+              </div>
+              <div class="flex-grow-1 ms-4">
+                <p class="fw-bold mb-1">Leading Languages</p>
+                <p class="text-muted mb-1">
+                  Utilizing major technologies and tools to help learn all leading programming languages.
+                </p>
+                <small><a href="">Learn more</a></small>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-lg-6 mb-5">
+            <div class="d-flex align-items-start">
+              <div class="flex-shrink-0">
+                <div class="p-3 badge-primary rounded-4">
+                  <i class="fas fa-stream fa-lg text-primary fa-fw"></i>
+                </div>
+              </div>
+              <div class="flex-grow-1 ms-4">
+                <p class="fw-bold mb-1">Beginner friendly</p>
+                <p class="text-muted mb-1">
+                  Codelab curriculm is designed to be seamlessly and user friendly from begginner to advanced students.
+                </p>
+                <small><a href="">Learn more</a></small>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-lg-6 mb-5">
+            <div class="d-flex align-items-start">
+              <div class="flex-shrink-0">
+                <div class="p-3 badge-primary rounded-4">
+                  <i class="fas fa-copy fa-lg text-primary fa-fw"></i>
+                </div>
+              </div>
+              <div class="flex-grow-1 ms-4">
+                <p class="fw-bold mb-1">Support and community</p>
+                <p class="text-muted mb-1">
+                  The Codelab team and student community are there to support you and grow together in your coding journey.
+                </p>
+                <small><a href="">Learn more</a></small>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+    </div>
 
     <div class="container card-container">
       <div class="row">
@@ -95,128 +176,129 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#004999"
-          fill-opacity="1"
-          d="M0,96L34.3,106.7C68.6,117,137,139,206,144C274.3,149,343,139,411,138.7C480,139,549,149,617,160C685.7,171,754,181,823,176C891.4,171,960,149,1029,138.7C1097.1,128,1166,128,1234,112C1302.9,96,1371,64,1406,48L1440,32L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-        ></path>
-      </svg>
-      <div class="row text-center page-divider flex-center">
-        <h1>Track Your Students Progress</h1>
+    <div class="container">
+      
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="sign-up-banner text-center">
+        <h1>Livestream Coding Classes</h1>
+        <hr />
+        <h1>Learn From Professionals</h1>
+      </div>
+      <h1 class="text-center">Why Learn To Code?</h1>
+      <p>
+        According to USA Today, some employers see programming as a computer
+        science talent gap. Programming is the ability to write computer
+        programs that perform specific tasks. There are many jobs that require
+        programming skills, and to be competitive, you have to be skilled in a
+        number of programming languages. A website called CareerOneStop, a jobs
+        and internships search engine, is home to a "developer job board," where
+        professionals can post their job descriptions.
+        <br />
+        <br />
+        Matthew W. Johnson, director of technology at Advance, said, "The
+        computing and I.T. field has grown significantly in the last 20 years.
+        In the U.S., there are more jobs available today than there were ten
+        years ago. Also, according to the Bureau of Labor Statistics, there is a
+        projected need for 637,000 computer science and related occupations over
+        the next decade.
+      </p>
+      <hr>
+      <div class="row mt-5">
+        <div class="col-lg-6 col-12">
+          <h1>Why Codelab?</h1>
+          <p>
+            Our code schools are a great
+            way to get started with coding and coding education. We have a fun,
+            engaging and hands-on approach to teaching coding. Our classes are
+            designed around the needs of your children. They will learn to code
+            in a safe, supportive and fun environment. The code classes will
+            help your kids develop skills that will be useful for them for the
+            rest of their lives. Code schools will teach them how to program in
+            JavaScript and HTML, and how the tools they use every day work. Our
+            classes include hands-on coding and programming activities, as well
+            as coding games. We will also teach you how programming can make
+            your students' lives easier, how you can use programming in your
+            classroom to teach kids how computers and technology work and why it is
+            important for kids to learn how things work in the first place.
+          </p>
+        </div>
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid" src="./imgs/computergirl.jpg" alt="" />
+        </div>
       </div>
     </div>
     <div class="container mt-3">
-      <div class="row">
-        <div class="center">
-          <!-- <div class="card">
-            <div class="additional">
-              <div class="user-card">
-                <div class="level center">Level 13</div>
-                <div class="points center">5,312 Points</div>
-                <div class="player-svg center mt-3">
-                  <img src="./imgs/Science-Girl-Ponytail-2.svg" alt="" />
-                </div>
-              </div>
-              <div class="more-info">
-                <h1>Jane Doe</h1>
-                <div class="coords">
-                  <span>Group Name</span>
-                  <span>Joined January 2019</span>
-                </div>
-                <div class="coords">
-                  <span>Position/Role</span>
-                  <span>City, Country</span>
-                </div>
-                <div class="stats">
-                  <div>
-                    <div class="title">Awards</div>
-                    <i class="fa fa-trophy"></i>
-                    <div class="value">2</div>
-                  </div>
-                  <div>
-                    <div class="title">Matches</div>
-                    <i class="fa fa-gamepad"></i>
-                    <div class="value">27</div>
-                  </div>
-                  <div>
-                    <div class="title">Pals</div>
-                    <i class="fa fa-group"></i>
-                    <div class="value">123</div>
-                  </div>
-                  <div>
-                    <div class="title">Coffee</div>
-                    <i class="fa fa-coffee"></i>
-                    <div class="value infinity">∞</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="general">
-              <h1>Jane Doe</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-                volutpat mauris, at molestie lacus. Nam vestibulum sodales odio
-                ut pulvinar.
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://mdbcdn.b-cdn.net/wp-content/uploads/2020/06/vertical.webp"
+              alt="Trendy Pants and Shoes"
+              class="img-fluid rounded-start"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
               </p>
-              <span class="more">Mouse over the card for more info</span>
-            </div>
-          </div> -->
-
-          <!-- <div class="card green">
-            <div class="additional">
-              <div class="user-card">
-                <div class="level center">Level 13</div>
-                <div class="points center">5,312 Points</div>
-                <div class="player-svg center mt-2">
-                  <img src="./imgs/science-girl-blonde.svg" alt="" />
-                </div>
-              </div>
-              <div class="more-info">
-                <h1>Jane Doe</h1>
-                <div class="coords">
-                  <span>Group Name</span>
-                  <span>Joined January 2019</span>
-                </div>
-                <div class="coords">
-                  <span>Position/Role</span>
-                  <span>City, Country</span>
-                </div>
-                <div class="stats">
-                  <div>
-                    <div class="title">Awards</div>
-                    <i class="fa fa-trophy"></i>
-                    <div class="value">2</div>
-                  </div>
-                  <div>
-                    <div class="title">Matches</div>
-                    <i class="fa fa-gamepad"></i>
-                    <div class="value">27</div>
-                  </div>
-                  <div>
-                    <div class="title">Pals</div>
-                    <i class="fa fa-group"></i>
-                    <div class="value">123</div>
-                  </div>
-                  <div>
-                    <div class="title">Coffee</div>
-                    <i class="fa fa-coffee"></i>
-                    <div class="value infinity">∞</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="general">
-              <h1>Jane Doe</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-                volutpat mauris, at molestie lacus. Nam vestibulum sodales odio
-                ut pulvinar.
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
               </p>
-              <span class="more">Mouse over the card for more info</span>
             </div>
-          </div> -->
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
